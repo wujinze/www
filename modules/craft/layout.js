@@ -1,0 +1,9 @@
+(function(app){
+    app.registerState('craft.index',{
+    	deps:[
+    		'css!/modules/carft/css/craft.css'
+    	]
+    });
+    app.registerState('craft.index.child');
+    app.registerState('craft.setting');
+})(stylePlus);

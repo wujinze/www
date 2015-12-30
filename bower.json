@@ -1,0 +1,26 @@
+{
+  "name": "demo2",
+  "authors": [
+    "林光辉 <'linguanghui@cmstop.com'>"
+  ],
+  "description": "移动框架测试",
+  "main": "index.js",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.22",
+    "mui": "~0.2.9"
+  }
+}

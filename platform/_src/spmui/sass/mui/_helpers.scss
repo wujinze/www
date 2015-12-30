@@ -1,0 +1,358 @@
+/**
+ * MUI Helpers module
+ */
+
+// ============================================================================
+// NODE-INSERTED
+// ============================================================================
+
+@keyframes mui-node-inserted {
+  from { opacity: 0.99; }
+  to { opacity: 1; }
+}
+
+
+
+
+// ============================================================================
+// ANIMATION
+// ============================================================================
+
+.#{$namespace}--no-transition {
+  transition: none !important;
+}
+
+
+
+
+// ============================================================================
+// USER SELECT
+// ============================================================================
+.#{$namespace}--no-user-select {
+  user-select: none;
+}
+
+
+
+
+// ============================================================================
+// CARET
+// ============================================================================
+
+.#{$namespace}-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top:   $mui-caret-width solid;
+  border-right: $mui-caret-width solid transparent;
+  border-left:  $mui-caret-width solid transparent;
+}
+
+
+
+
+// ============================================================================
+// ALIGNMENT HELPERS
+// ============================================================================
+
+.#{$namespace}--text-left           { text-align: left !important; }
+.#{$namespace}--text-right          { text-align: right !important; }
+.#{$namespace}--text-center         { text-align: center !important; }
+.#{$namespace}--text-justify        { text-align: justify !important; }
+.#{$namespace}--text-nowrap         { white-space: nowrap !important; }
+
+.#{$namespace}--align-baseline      { vertical-align: baseline !important; }
+.#{$namespace}--align-top           { vertical-align: top !important; }
+.#{$namespace}--align-middle        { vertical-align: middle !important; }
+.#{$namespace}--align-bottom        { vertical-align: bottom !important; }
+
+
+
+
+// ============================================================================
+// TEXT COLOR HELPERS
+// ============================================================================
+
+.#{$namespace}--text-danger   { color: $mui-danger-color; }
+
+.#{$namespace}--text-black    { color: mui-color('black'); }
+.#{$namespace}--text-black-87 { color: mui-color('black-alpha-87'); }
+.#{$namespace}--text-black-54 { color: mui-color('black-alpha-54'); }
+.#{$namespace}--text-black-38 { color: mui-color('black-alpha-38'); }
+.#{$namespace}--text-black-12 { color: mui-color('black-alpha-12'); }
+
+.#{$namespace}--text-white    { color: mui-color('white'); }
+.#{$namespace}--text-white-70 { color: mui-color('white-alpha-70'); }
+.#{$namespace}--text-white-30 { color: mui-color('white-alpha-30'); }
+.#{$namespace}--text-white-12 { color: mui-color('white-alpha-12'); }
+
+.#{$namespace}--text-accent    { color: $mui-accent-color; }
+.#{$namespace}--text-accent-87 { color: rgba($mui-accent-color, .87); }
+.#{$namespace}--text-accent-54 { color: rgba($mui-accent-color, .54); }
+.#{$namespace}--text-accent-38 { color: rgba($mui-accent-color, .38); }
+.#{$namespace}--text-accent-12 { color: rgba($mui-accent-color, .12); }
+
+
+// ============================================================================
+// LISTS
+// ============================================================================
+
+@mixin x-list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// [converter] extracted as `@mixin list-unstyled` for libsass compatibility
+.#{$namespace}-list--unstyled {
+  @include x-list-unstyled();
+}
+
+// Inline turns list items into inline-block
+.#{$namespace}-list--inline {
+  @include x-list-unstyled();
+
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+
+
+
+// ============================================================================
+// DEPTH HELPERS
+// ============================================================================
+
+.#{$namespace}--z1 {
+  box-shadow: 0 1px 3px rgba(mui-color('black'), 0.12),
+              0 1px 2px rgba(mui-color('black'), 0.24);
+}
+
+.#{$namespace}--z2 {
+  box-shadow: 0 3px 6px rgba(mui-color('black'), 0.16),
+              0 3px 6px rgba(mui-color('black'), 0.23);
+}
+
+.#{$namespace}--z3 {
+  box-shadow: 0 10px 20px rgba(mui-color('black'), 0.19),
+              0 6px 6px rgba(mui-color('black'), 0.23);
+}
+
+.#{$namespace}--z4 {
+  box-shadow: 0 14px 28px rgba(mui-color('black'), 0.25),
+              0 10px 10px rgba(mui-color('black'), 0.22);  
+}
+
+.#{$namespace}--z5 {
+  box-shadow: 0 19px 38px rgba(mui-color('black'), 0.30),
+              0 15px 12px rgba(mui-color('black'), 0.22);
+}
+
+
+
+
+// ============================================================================
+// FLOAT HELPERS
+// ============================================================================
+
+.#{$namespace}--clearfix {
+  @include mui-clearfix();
+}
+
+.#{$namespace}--pull-right {
+  float: right !important;
+}
+
+.#{$namespace}--pull-left {
+  float: left !important;
+}
+
+
+
+
+// ============================================================================
+// TOGGLE HELPERS
+// ============================================================================
+
+.#{$namespace}--hide {
+  display: none !important;
+}
+
+.#{$namespace}--show {
+  display: block !important;
+}
+
+.#{$namespace}--invisible {
+  visibility: hidden;
+}
+
+.#{$namespace}--overflow-hidden {
+  overflow: hidden !important;
+}
+
+.#{$namespace}--overflow-hidden-x {
+  overflow-x: hidden !important;
+}
+
+.#{$namespace}--overflow-hidden-y {
+  overflow-y: hidden !important;
+}
+
+
+
+// ============================================================================
+// RESPONSIVE UTILITIES
+// ============================================================================
+
+@mixin x-responsive-visibility($parent) {
+  #{$parent} {
+    display: block !important;
+  }
+
+  table#{$parent}  { display: table; }
+  tr#{$parent}     { display: table-row !important; }
+  th#{$parent},
+  td#{$parent}     { display: table-cell !important; }
+}
+
+// [converter] $parent hack
+@mixin x-responsive-invisibility($parent) {
+  #{$parent} {
+    display: none !important;
+  }
+}
+
+.#{$namespace}--visible-xs-block,
+.#{$namespace}--visible-xs-inline,
+.#{$namespace}--visible-xs-inline-block,
+.#{$namespace}--visible-sm-block,
+.#{$namespace}--visible-sm-inline,
+.#{$namespace}--visible-sm-inline-block,
+.#{$namespace}--visible-md-block,
+.#{$namespace}--visible-md-inline,
+.#{$namespace}--visible-md-inline-block,
+.#{$namespace}--visible-lg-block,
+.#{$namespace}--visible-lg-inline,
+.#{$namespace}--visible-lg-inline-block {
+  display: none !important;
+}
+
+@media (max-width: $mui-screen-xs-max) {
+  @include x-responsive-visibility('.#{$namespace}-visible-xs');
+}
+
+.#{$namespace}--visible-xs-block {
+  @media (max-width: $mui-screen-xs-max) {
+    display: block !important;
+  }
+}
+
+.#{$namespace}--visible-xs-inline {
+  @media (max-width: $mui-screen-xs-max) {
+    display: inline !important;
+  }
+}
+
+.#{$namespace}--visible-xs-inline-block {
+  @media (max-width: $mui-screen-xs-max) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $mui-screen-sm-min) and (max-width: $mui-screen-sm-max) {
+  @include x-responsive-visibility('.#{$namespace}--visible-sm');
+}
+
+.#{$namespace}--visible-sm-block {
+  @media (min-width: $mui-screen-sm-min) and (max-width: $mui-screen-sm-max) {
+    display: block !important;
+  }
+}
+
+.#{$namespace}--visible-sm-inline {
+  @media (min-width: $mui-screen-sm-min) and (max-width: $mui-screen-sm-max) {
+    display: inline !important;
+  }
+}
+
+.#{$namespace}--visible-sm-inline-block {
+  @media (min-width: $mui-screen-sm-min) and (max-width: $mui-screen-sm-max) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $mui-screen-md-min) and (max-width: $mui-screen-md-max) {
+  @include x-responsive-visibility('.#{$namespace}--visible-md');
+}
+
+.#{$namespace}--visible-md-block {
+  @media (min-width: $mui-screen-md-min) and (max-width: $mui-screen-md-max) {
+    display: block !important;
+  }
+}
+
+.#{$namespace}--visible-md-inline {
+  @media (min-width: $mui-screen-md-min) and (max-width: $mui-screen-md-max) {
+    display: inline !important;
+  }
+}
+
+.#{$namespace}--visible-md-inline-block {
+  @media (min-width: $mui-screen-md-min) and (max-width: $mui-screen-md-max) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $mui-screen-lg-min) {
+  @include x-responsive-visibility('.#{$namespace}--visible-lg');
+}
+
+.#{$namespace}--visible-lg-block {
+  @media (min-width: $mui-screen-lg-min) {
+    display: block !important;
+  }
+}
+
+.#{$namespace}--visible-lg-inline {
+  @media (min-width: $mui-screen-lg-min) {
+    display: inline !important;
+  }
+}
+
+.#{$namespace}--visible-lg-inline-block {
+  @media (min-width: $mui-screen-lg-min) {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: $mui-screen-xs-max) {
+  @include x-responsive-invisibility('.#{$namespace}--hidden-xs');
+}
+
+@media (min-width: $mui-screen-sm-min) and (max-width: $mui-screen-sm-max) {
+  @include x-responsive-invisibility('.#{$namespace}--hidden-sm');
+}
+
+@media (min-width: $mui-screen-md-min) and (max-width: $mui-screen-md-max) {
+  @include x-responsive-invisibility('.#{$namespace}--hidden-md');
+}
+
+@media (min-width: $mui-screen-lg-min) {
+  @include x-responsive-invisibility('.#{$namespace}--hidden-lg');
+}
+
+
+
+// ============================================================================
+// SCROLL BLOCK
+// ============================================================================
+
+body.#{$namespace}-body--scroll-lock {
+  overflow: hidden !important;
+}

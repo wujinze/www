@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/feirpri/CloudServ-Node.git"
+  },
+  "author": "feirpri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/feirpri/CloudServ-Node/issues"
+  },
+  "homepage": "https://gitlab.com/feirpri/CloudServ-Node#README",
+  "engines": {
+    "node": "^5.1.0",
+    "npm": "^3.3.12",
+    "gulp": "^3.9.0"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-angular-jsdoc": "^0.1.4",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

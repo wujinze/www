@@ -1,0 +1,25 @@
+/**
+ * MUI Dividers module
+ */
+
+.#{$namespace}-divider {
+  display: block;
+  height: 1px;
+  background-color: $mui-divider-color;
+}
+
+.#{$namespace}--divider-top {
+  border-top: 1px solid $mui-divider-color;
+}
+
+.#{$namespace}--divider-bottom {
+  border-bottom: 1px solid $mui-divider-color;
+}
+
+.#{$namespace}--divider-left {
+  border-left: 1px solid $mui-divider-color;
+}
+
+.#{$namespace}--divider-right {
+  border-right: 1px solid $mui-divider-color;
+}

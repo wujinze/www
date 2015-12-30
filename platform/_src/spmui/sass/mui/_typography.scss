@@ -1,0 +1,51 @@
+/**
+ * MUI Typography module
+ */
+
+.#{$namespace}--text-display4 {
+  @include mui-text("display4");
+}
+
+.#{$namespace}--text-display3 {
+  @include mui-text("display3");
+}
+
+.#{$namespace}--text-display2 {
+  @include mui-text("display2");
+}
+
+.#{$namespace}--text-display1 {
+  @include mui-text("display1");
+}
+
+.#{$namespace}--text-headline {
+  @include mui-text("headline");
+}
+
+.#{$namespace}--text-title {
+  @include mui-text("title");
+}
+
+.#{$namespace}--text-subhead {
+  @include mui-text("subhead");
+}
+
+.#{$namespace}--text-body2 {
+  @include mui-text("body2");
+}
+
+.#{$namespace}--text-body1 {
+  @include mui-text("body1");
+}
+
+.#{$namespace}--text-caption {
+  @include mui-text("caption");
+}
+
+.#{$namespace}--text-menu {
+  @include mui-text("menu");
+}
+
+.#{$namespace}--text-button {
+  @include mui-text("button");
+}
